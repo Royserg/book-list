@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 
 /* connect to database on mlab */
-mongoose.connect('mongodb://primary:pass123@ds147052.mlab.com:47052/gql-first');
+mongoose.connect('mongodb://primary:pass123@ds147052.mlab.com:47052/gql-first', { useNewUrlParser: true });
 mongoose.connection.once('open', () => (
   console.log('Connected to db')
 ));
