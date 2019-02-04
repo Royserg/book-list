@@ -23,7 +23,7 @@ app.use('/graphql', graphqlHTTP({
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
-});
+})
 
 const PORT = process.env.PORT || 4000 ;
 

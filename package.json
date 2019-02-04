@@ -1,19 +1,25 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "My first application using graphql",
+  "description": "Application showing books added to database, retrieved with GraphQL",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client": "npm start --prefix client",
+    "server": "nodemon app.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Royserg",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^4.1.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "express-graphql": "^0.7.1",
     "graphql": "^14.0.2",
     "lodash": "^4.17.11",
     "mongoose": "^5.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
   }
 }
